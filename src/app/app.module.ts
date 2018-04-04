@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ComponentFactoryResolver } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, FormControl, ReactiveFormsModule } from '@angular/forms';
 
@@ -49,6 +49,7 @@ import { ItemComponent } from './item/item.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [ItemComponent],
   imports: [
     ReactiveFormsModule,
     FormsModule,

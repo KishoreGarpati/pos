@@ -1,1 +1,11 @@
-<app-item></app-item>
+<div #parent>
+</div>
+<div class="add-btn">
+    <mat-form-field>
+        <input matInput placeholder="మొత్తం" type="number" [(ngModel)]="total">
+        <span matPrefix>₹&nbsp;</span>
+    </mat-form-field>
+    <button mat-raised-button
+           (click)="addComponent()">Add</button>
+    <button mat-raised-button> </button>
+</div>

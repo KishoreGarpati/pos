@@ -11,14 +11,11 @@
     <input matInput placeholder="బరువు" [(ngModel)]="weight" (ngModelChange)="calTotal()" type="number">
 </mat-form-field>
 <mat-form-field>
-    <input matInput placeholder="కేజి ఖరీదు" [(ngModel)]="weight" (ngModelChange)="calTotal()" type="number">
+    <input matInput placeholder="కేజి ఖరీదు" [(ngModel)]="price" (ngModelChange)="calTotal()" type="number">
     <span matPrefix>₹&nbsp;</span>
 </mat-form-field>
-<mat-form-field>
-    <input matInput placeholder="మొత్తం" [(ngModel)]="weight" (ngModelChange)="calTotal()" type="number">
-    <span matPrefix>₹&nbsp;</span>
-</mat-form-field>
+    {{total}}
 <button mat-raised-button (click)="removeObject()">
-    remove
+    REMOVE
 </button>
 </div>

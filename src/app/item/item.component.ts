@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormControl, FormsModule } from '@angular/forms';
 
 @Component({
@@ -12,6 +12,10 @@ export class ItemComponent implements OnInit {
   weight: number;
   price: number;
   total = 0;
+
+  @Output()
+  change: EventEmitter<any> = new EventEmitter<any>();
+
   options = [
     'ఇనుము',
     'అల్యూమినియం',
@@ -26,6 +30,11 @@ export class ItemComponent implements OnInit {
     } else {
       this.total = 0;
     }
+    this.change.emit({
+      price: this.price,
+      weight: this.weight,
+      total: this.total
+    });
   }
   removeObject() {
     this._ref.destroy();
