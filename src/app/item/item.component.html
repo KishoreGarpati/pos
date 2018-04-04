@@ -1,5 +1,7 @@
 <div class="container">
-  <mat-form-field>
+    <button mat-mini-fab
+    (click)="removeObject()"><mat-icon>clear</mat-icon></button>
+  <mat-form-field style="width:80px !important;">
     <input type="text" placeholder="మెటిరియల్" [formControl]="myControl" aria-label="Number" matInput [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete">
       <mat-option *ngFor="let option of options" [value]="option">
@@ -7,15 +9,12 @@
       </mat-option>
     </mat-autocomplete>
 </mat-form-field>
-<mat-form-field>
+<mat-form-field style="width:80px !important;">
     <input matInput placeholder="బరువు" [(ngModel)]="weight" (ngModelChange)="calTotal()" type="number">
 </mat-form-field>
-<mat-form-field>
+<mat-form-field style="width:80px !important;">
     <input matInput placeholder="కేజి ఖరీదు" [(ngModel)]="price" (ngModelChange)="calTotal()" type="number">
     <span matPrefix>₹&nbsp;</span>
 </mat-form-field>
     {{total}}
-<button mat-raised-button (click)="removeObject()">
-    REMOVE
-</button>
 </div>

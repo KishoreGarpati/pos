@@ -4,7 +4,8 @@ import { Component,
   ComponentFactoryResolver,
   ViewContainerRef } from '@angular/core';
 import { ItemComponent } from './item/item.component';
-
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +16,7 @@ export class AppComponent {
   @ViewChild('parent', { read: ViewContainerRef }) container: ViewContainerRef;
   total: number;
   itemList = [];
-  constructor(private _cfr: ComponentFactoryResolver) {
-
-  }
+  constructor(private _cfr: ComponentFactoryResolver) {}
 
   addComponent() {
     const comp = this._cfr.resolveComponentFactory(ItemComponent);

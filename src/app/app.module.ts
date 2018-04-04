@@ -35,7 +35,7 @@ import {
   MatTableModule,
   MatTabsModule,
   MatToolbarModule,
-  MatTooltipModule,
+  MatTooltipModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -86,7 +86,7 @@ import { ItemComponent } from './item/item.component';
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
   ]
 })
-export class AppModule { }
+export class AppModule {}
