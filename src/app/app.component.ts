@@ -16,6 +16,9 @@ export class AppComponent {
   @ViewChild('parent', { read: ViewContainerRef }) container: ViewContainerRef;
   total: number;
   itemList = [];
+  mainWidth;
+  sideNavWidth;
+
   constructor(private _cfr: ComponentFactoryResolver) {}
 
   addComponent() {
@@ -39,5 +42,13 @@ export class AppComponent {
   }
   setTotal(total) {
     this.total = total;
+  }
+  openNav() {
+    this.mainWidth = '80px';
+    this.sideNavWidth = '80px';
+  }
+  closeNav() {
+    this.mainWidth = '0px';
+    this.sideNavWidth = '0px';
   }
 }
